@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus_Cart_MSEUF_store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">🎒CampusCart</h2>
+            </a>
+
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Store</a>
+                </li>
+                <li class="nav-item">
+                    <a href="suggestion.html" class="nav-link">Feedback</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link">Log Out</a>
+                </li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="menu-section">
+                <h2 class="section-title">Store</h2>
+                <div class="cart-icon" onclick="toggleCartDropdown()">
+                    <i class="fa fa-shopping-cart"></i>
+                </div>
+
+                <div class="cart-dropdown" id="cart-dropdown">
+                    <h3>Cart List</h3>
+                    <ul id="cart-items"> </ul>
+                    <div class="cart-footer">
+                        <p>Total: <span id="cart-total">₱0.00</span></p>
+                        <button id="checkout-button" class="checkout-button">Checkout</button>
+                    </div>
+                </div>
+
+                <div id="checkout-modal" class="checkout-modal">
+                    <div class="modal-content">
+                        <span id="modal-close" class="close-btn">&times;</span>
+                        <h3>Thank you for your purchase!</h3>
+                        <p>Kindly claim and pay for your item at the booth.</p>
+                        <p>Your total: <strong id="modal-total-price">₱0.00</strong></p>
+                    </div>
+                </div>
+                    
+
+            <div class="section-content">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <img src="images/crayons.png" alt="crayons" class="menu-image">
+                        <h3 class="name">Crayons</h3>
+                        <p class="price">₱25.00</p>
+                        <p class="text">Bright and colorful, crayons are perfect for creative projects and bringing drawings to life. </p>
+                        <button class="cart-box">Add to Cart</button>
+                    </li>
+
+                    <li class="menu-item">
+                        <img src="images/eraser.png" alt="eraser" class="menu-image">
+                        <h3 class="name">Eraser</h3>
+                        <p class="price">₱15.00</p>
+                        <p class="text">A handy tool for correcting mistakes in pencil sketches and writings, 
+                            the eraser ensures precision and a clean slate every time.</p>
+                        <button class="cart-box">Add to Cart</button>
+                    </li>
+
+                    <li class="menu-item">
+                        <img src="images/gluestick.png" alt="gluestick" class="menu-image">
+                        <h3 class="name">Gluestick</h3>
+                        <p class="price">₱25.00</p>
+                        <p class="text">Easy to use and mess-free, the gluestick is essential for crafts and school projects, 
+                            offering strong adhesion for paper and lightweight materials.</p>
+                        <button class="cart-box">Add to Cart</button>
+                    </li>
+
+                    <li class="menu-item">
+                        <img src="images/whiteg.png" alt="glue" class="menu-image">
+                        <h3 class="name">Glue</h3>
+                        <p class="price">₱45.00</p>
+                        <p class="text">Versatile and durable, glue is perfect for a wide range of projects, 
+                            from crafting to quick fixes, providing a reliable bond.</p>
+                        <button class="cart-box">Add to Cart</button>
+                    </li>
+
+                    <li class="menu-item">
+                        <img src="images/highlighter.png" alt="highlighter" class="menu-image">
+                        <h3 class="name">Highlighter</h3>
+                        <p class="price">₱70.00</p>
+                        <p class="text">Make important notes and key points stand out with bold, fluorescent highlighters, 
+                            available in a variety of eye-catching colors.</p>
+                        <button class="cart-box">Add to Cart</button>
+                    </li>
+
+                    <li class="menu-item">
+                        <img src="images/Notebook.png" alt="Notebook" class="menu-image">
+                        <h3 class="name">Notebook</h3>
+                        <p class="price">₱35.00</p>
+                        <p class="text">A must-have for jotting down ideas, taking notes, or journaling, 
+                            this notebook combines style and functionality for everyday use.</p>
+                        <button class="cart-box">Add to Cart</button>
+                    </li>
+
+                    <li class="menu-item">
+                        <img src="images/pencil.png" alt="pencil" class="menu-image">
+                        <h3 class="name">Pencil</h3>
+                        <p class="price">₱15.00</p>
+                        <p class="text">Perfect for drawing, sketching, and writing, the pencil is a 
+                            classic tool that allows creativity and precision with an erasable finish.</p>
+                        <button class="cart-box">Add to Cart</button>
+                    </li>
+
+                    <li class="menu-item">
+                        <img src="images/pens.png" alt="pens" class="menu-image">
+                        <h3 class="name">Pens</h3>
+                        <p class="price">₱11.00</p>
+                        <p class="text">Smooth and reliable, pens are great for writing, signing, and sketching, 
+                            available in multiple ink colors to suit your style.</p>
+                        <button class="cart-box">Add to Cart</button>
+                    </li>
+
+                    <li class="menu-item">
+                        <img src="images/pens.png" alt="pens" class="menu-image">
+                        <h3 class="name">Pens</h3>
+                        <p class="price">₱11.00</p>
+                        <p class="text">Smooth and reliable, pens are great for writing, signing, and sketching, 
+                            available in multiple ink colors to suit your style.</p>
+                        <button class="cart-box">Add to Cart</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <script src="store.js"></script>
+</body>
+</html>
